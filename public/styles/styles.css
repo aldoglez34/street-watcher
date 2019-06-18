@@ -1,3 +1,45 @@
-.list-group-item {
-  line-height: 2.5;
+html, body {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(35deg, #64B6AC, #3C6B7C 100%);
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.logo {
+  color: #e0eff2;
+  font: italic bold 80px Georgia, Serif;
+  text-shadow: -4px 3px 0 #3a50d9, -14px 7px 0 #0a0e27;
+}
+
+main {
+  margin: auto;
+  padding: 10px;
+}
+
+.bttnwrap {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #e0eff2;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.bttn {
+  width: 100%;
+  height: 50px;
+  font-family: 'Open Sans', sans-serif;
+  transition: all 0.2s ease-in-out;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #e0eff2;
+  letter-spacing: 2px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+}
+
+.bttnwrap:hover {
+  background-color: #e0eff2;
 }
