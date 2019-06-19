@@ -1,3 +1,3 @@
 # Third Eye
 
-Project #2
+Third Eye is a web app that helps you report non-emergency traffic violations.
