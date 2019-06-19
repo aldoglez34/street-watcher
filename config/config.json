@@ -1,21 +1,26 @@
 {
   "development": {
     "username": "root",
-    "password": null,
-    "database": "exampledb",
+    "password": "123456",
+    "database": "thirdeye_db",
     "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": null,
-    "database": "testdb",
+    "password": "123456",
+    "database": "thirdeye_db",
     "host": "localhost",
-    "dialect": "mysql",
-    "logging": false
+    "port": 3306,
+    "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "JAWSDB_URL",
+    "username": "root",
+    "password": "123456",
+    "database": "thirdeye_db",
+    "host": "localhost",
+    "port": 3306,
     "dialect": "mysql"
   }
 }

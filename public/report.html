@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Third Eye</title>
+
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- bootstrap and js -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0/flatly/bootstrap.min.css" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="css/styles.css" media="screen" title="no title">
+
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <!-- favicon -->
+    <link rel="icon" href="./img/favicon.png">
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="d-flex w-100 h-100 p-3">
+
+        <!-- ! reports div -->
+        <main style="padding-bottom: 250px;">
+
+            <!-- license plate -->
+            <div class="containter">
+                <h1 class="text-light">License plate</h1>
+                <form>
+                    <div class="form-group">
+                        <input class="form-control mb-4 text-dark" placeholder="Ex. AZM9590">
+                    </div>
+                </form>
+            </div>
+
+            <!-- infraction -->
+            <div class="containter">
+                <h1 class="text-light">Infraction</h1>
+                <div class="list-group" id="infractions-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+                        href="#list-home" role="tab" aria-controls="home">Speeding</a>
+                    <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+                        href="#list-profile" role="tab" aria-controls="profile">Running a red light</a>
+                    <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+                        href="#list-messages" role="tab" aria-controls="messages">Not signaling</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Driving in car pool lane</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Not stopping for school bus</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Not stopping for pedestrians</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Not using seat belt</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Passing in a no passing zone</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Drunk driving</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Reckless driving</a>
+                    <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                        href="#list-settings" role="tab" aria-controls="settings">Underage</a>
+                </div>
+
+                <!-- report button -->
+                <button type="submit" class="btn btn-danger btn-block mt-4 p-2">REPORT</button>
+        </main>
+
+    </div>
+
+    <!-- custom scripts -->
+    <script src="js/report.js" type="text/javascript"></script>
+
+    <!-- boostrap cdn and js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

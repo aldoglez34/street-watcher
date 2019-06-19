@@ -33,7 +33,7 @@ main {
   transition: all 0.2s ease-in-out;
   font-size: 17px;
   text-transform: uppercase;
-  color: #e0eff2;
+  /* color: #e0eff2; */
   letter-spacing: 2px;
   text-align: center;
   vertical-align: middle;
@@ -42,4 +42,13 @@ main {
 
 .bttnwrap:hover {
   background-color: #e0eff2;
+}
+
+a {
+  color: #e0eff2;
+}
+
+a:hover {
+  color: darkslategray;
+  text-decoration: none;
 }

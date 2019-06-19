@@ -1,0 +1,12 @@
+infraction_id,description,value
+1,Speeding,20
+2,Running a red light,20
+3,Not signaling,20
+4,Driving in car pool lane,20
+5,Not stopping for school bus,20
+6,Not stopping for pedestrians,20
+7,Not using seat belt,20
+8,Passing in a no passing zone,20
+9,Drunk driving,20
+10,Reckless driving,20
+11,Underage,20
