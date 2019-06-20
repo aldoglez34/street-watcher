@@ -1,5 +1,5 @@
-report_id,plate_id,infraction_id,timestamp
-1,2,1,
-2,3,2,
-3,2,1,
-4,3,3,
+id,plate,owner,description,createdAt,updatedAt
+1,961351,Shah Henson,Not using seat belt,,
+2,961351,Shah Henson,Passing in a no passing zone,,
+3,961351,Shah Henson,Not stopping for pedestrians,,
+4,961351,Shah Henson,Not using seat belt,,
