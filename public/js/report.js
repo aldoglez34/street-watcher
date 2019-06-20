@@ -27,7 +27,6 @@ $(document).ready(function () {
                 report.description = $(this).attr("description");
                 report.value = $(this).attr("value");
 
-                console.log(report);
             });
         });
     }
@@ -40,25 +39,34 @@ $(document).ready(function () {
         // validation
         if (report.licenseplate != "" && report.description != "") {
 
-            console.log(report);
-
+            // getting the plate info from the plates table
             $.get("/api/plates/" + report.licenseplate, function (data) {
 
-                if (!data) {
+                if (data) {
 
-                    alert("Please enter a valid License Plate.");
+                    console.log(report);
+
+                    // updating points
+                    $.ajax("/api/points/" + report.licenseplate, {
+
+                        data: {
+                            puntosarestar: report.value,
+                            puntosactuales: data.points
+                        },
+                        method: "PUT",
+                        dataType: "json"
+
+                    }).done(function (res) {
+
+                        console.log(res);
+                        alert("Your report was successfully posted.");
+                    });
                 }
                 else {
 
-                    console.log("get a las placas: ");
-                    console.log(data);
-
-                    // comment
-
+                    alert("Please enter a valid License Plate.");
                 }
-
             });
-
         }
         else {
 
