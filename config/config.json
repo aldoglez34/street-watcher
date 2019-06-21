@@ -16,12 +16,12 @@
     "dialect": "mysql"
   },
   "production": {
+    "use_env_variable": "JAWSDB_URL",
     "username": "root",
     "password": "123456",
     "database": "thirdeye_db",
     "host": "localhost",
     "port": 3306,
-    "dialect": "mysql",
-	"use_env_variable": "JAWSDB_URL"
+    "dialect": "mysql"
   }
 }
