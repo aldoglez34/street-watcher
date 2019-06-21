@@ -1,5 +1,5 @@
-id,plate,owner,description,createdAt,updatedAt
-1,961351,Shah Henson,Not using seat belt,,
-2,961351,Shah Henson,Passing in a no passing zone,,
-3,961351,Shah Henson,Not stopping for pedestrians,,
-4,961351,Shah Henson,Not using seat belt,,
+id,plate,owner,description,value,createdAt,updatedAt
+1,961351,Shah Henson,Not using seat belt,20,,
+2,961351,Shah Henson,Passing in a no passing zone,20,,
+3,961351,Shah Henson,Not stopping for pedestrians,20,,
+4,961351,Shah Henson,Not using seat belt,20,,

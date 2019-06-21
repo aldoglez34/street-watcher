@@ -15,15 +15,14 @@ module.exports = function (app) {
         });
     });
 
+    // PUT route to UPDATE the points of the plate being reported
     app.put("/api/points/:plate", function (req, res, next) {
 
         var body = req.body;
 
         var newpoints = parseInt(body.puntosactuales) - parseInt(body.puntosarestar);
 
-        console.log(newpoints);
-
-        // update
+        // update query
         db.Plate.findOne({ where: { plate: req.params.plate } }).then(function (dbPlate) {
             dbPlate.update({
                 points: newpoints

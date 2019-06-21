@@ -1,8 +1,9 @@
 $(document).ready(function () {
 
     var report = {
+        plate: "",
+        owner: "",
         description: "",
-        licenseplate: "",
         value: ""
     };
 
@@ -34,36 +35,45 @@ $(document).ready(function () {
     // ! pressing report button
     $("#reportbttn").click(function () {
 
-        report.licenseplate = $.trim($("#licenseplate").val());
+        report.plate = $.trim($("#licenseplate").val());
 
-        // validation
-        if (report.licenseplate != "" && report.description != "") {
+        // first validation: checking if the fields aren't empty
+        if (report.plate != "" && report.description != "") {
 
-            // getting the plate info from the plates table
-            $.get("/api/plates/" + report.licenseplate, function (data) {
+            // second validation: checking if the given plate actually exists in the database
+            $.get("/api/plates/" + report.plate, function (data) {
 
+                // if exists, then continue adding the new report
                 if (data) {
 
-                    console.log(report);
+                    // first, add the owner name on the report object
+                    report.owner = data.owner;
 
-                    // updating points
-                    $.ajax("/api/points/" + report.licenseplate, {
+                    // now that the report object is complete, make a post call to add it to the reports table
+                    $.post("/api/newreport", report, function () {
 
-                        data: {
-                            puntosarestar: report.value,
-                            puntosactuales: data.points
-                        },
-                        method: "PUT",
-                        dataType: "json"
+                        // then update points on the plates table
+                        $.ajax("/api/points/" + report.plate, {
 
-                    }).done(function (res) {
+                            data: {
+                                puntosarestar: report.value,
+                                puntosactuales: data.points
+                            },
+                            method: "PUT",
+                            dataType: "json"
 
-                        console.log(res);
-                        alert("Your report was successfully posted.");
+                        }).done(function (res) {
+                            // console.log(res);
+                            alert("Your report was successfully posted.");
+                            // finally go to main page
+                            window.location.href = "/";
+                        });
+
                     });
-                }
-                else {
 
+                }
+                // if it doesn't exist, notificate the user
+                else {
                     alert("Please enter a valid License Plate.");
                 }
             });

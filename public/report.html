@@ -30,11 +30,15 @@
     <div class="d-flex w-100 h-100 p-3">
 
         <!-- ! reports div -->
-        <main style="padding-bottom: 250px;">
+        <main class="text-center">
 
             <!-- license plate -->
             <div class="containter">
-                <h1 class="text-light">License Plate</h1>
+                <h1 class="text-light"><b>REPORT</b></h1>
+
+                <hr>
+
+                <h4 class="text-light mb-3">Enter a License Plate</h4>
                 <form>
                     <div class="form-group">
                         <input class="form-control mb-4 text-dark" id="licenseplate">
@@ -42,15 +46,18 @@
                 </form>
             </div>
 
+            <hr>
+
             <!-- infraction -->
             <div class="containter">
-                <h1 class="text-light">Infraction</h1>
-                <div class="list-group" id="infractions-tab">
+                <h4 class="text-light mb-3">Select an Infraction</h4>
+                <div class="list-group text-left" id="infractions-tab">
 
                 </div>
+            </div>
 
-                <!-- report button -->
-                <button type="submit" class="btn btn-danger btn-block mt-4 p-2" id="reportbttn">REPORT</button>
+            <!-- report button -->
+            <button type="submit" class="btn btn-danger btn-block mt-4 p-2" id="reportbttn">REPORT</button>
         </main>
 
     </div>
