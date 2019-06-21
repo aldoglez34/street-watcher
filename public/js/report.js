@@ -16,6 +16,8 @@ $(document).ready(function () {
 
             var infractions = [];
 
+            console.log(data);
+
             for (var i = 0; i < data.length; i++) {
 
                 infractions.push(data[i]);
