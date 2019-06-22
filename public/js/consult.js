@@ -21,12 +21,21 @@ $(document).ready(function () {
                     console.log(data);
 
                     if (data.points >= 80) {
+                        $("#points").removeClass("text-success");
+                        $("#points").removeClass("text-danger");
+                        $("#points").removeClass("text-warning");
                         $("#points").addClass("text-success");
                     }
                     else if (data.points <= 79 && data.points >= 50) {
+                        $("#points").removeClass("text-success");
+                        $("#points").removeClass("text-danger");
+                        $("#points").removeClass("text-warning");
                         $("#points").addClass("text-warning");
                     }
                     else if (data.points < 49) {
+                        $("#points").removeClass("text-success");
+                        $("#points").removeClass("text-danger");
+                        $("#points").removeClass("text-warning");
                         $("#points").addClass("text-danger");
                     }
 
