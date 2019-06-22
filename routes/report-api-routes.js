@@ -11,4 +11,15 @@ module.exports = function (app) {
         });
     });
 
+    // GET route to get all the infractions of a given plate
+    app.get("/api/reportinfractions/:plate", function (req, res) {
+        db.Report.findAll({
+            where: {
+                plate: req.params.plate
+            }
+        }).then(function (dbPlate) {
+            res.json(dbPlate);
+        });
+    });
+
 };

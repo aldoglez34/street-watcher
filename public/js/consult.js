@@ -43,6 +43,21 @@ $(document).ready(function () {
                     $("#plate").text(data.plate);
                     $("#points").text(data.points);
 
+                    $.get("/api/reportinfractions/" + plate, function (infractions) {
+
+                        console.log(infractions);
+
+                        if (!infractions) {
+                            $("#inf").html("");
+                        }
+                        else {
+                            for (var i = 0; i < infractions.length; i++) {
+                                $("#inf").append("<div class='text-left lead'>" + infractions[i].description + " at " + infractions[i].createdAt + "</div>");
+                            }
+                        }
+
+                    });
+
                 }
                 else {
                     // if it doesn't exist, notificate the user
