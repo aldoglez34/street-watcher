@@ -58,12 +58,16 @@ $(document).ready(function () {
                 else {
                     // if it doesn't exist, notificate the user
                     alert("Please enter a valid License Plate.");
+
+                    $("#searchcontainer").hide();
                 }
             });
         }
         else {
             // means the text box is
             alert("Please enter a License Plate.")
+
+            $("#searchcontainer").hide();
         }
     });
 
