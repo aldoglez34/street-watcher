@@ -6,6 +6,7 @@ $(document).ready(function () {
     $("#searchbttn").click(function () {
 
         plate = $.trim($("#licenseplate").val());
+        $("#inf").html("");
 
         // first validation: checking if the field isn't empty
         if (plate != "") {
@@ -47,13 +48,8 @@ $(document).ready(function () {
 
                         console.log(infractions);
 
-                        if (!infractions) {
-                            $("#inf").html("");
-                        }
-                        else {
-                            for (var i = 0; i < infractions.length; i++) {
-                                $("#inf").append("<div class='text-left lead'>" + infractions[i].description + " at " + infractions[i].createdAt + "</div>");
-                            }
+                        for (var i = 0; i < infractions.length; i++) {
+                            $("#inf").append("<div class='text-left lead'>" + infractions[i].description + " at " + infractions[i].createdAt + "</div>");
                         }
 
                     });
