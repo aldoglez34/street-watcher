@@ -1,3 +1,3 @@
-# Third Eye
+# Street Watcher
 
-Third Eye is a web app that helps you report non-emergency traffic violations.
+Street Watcher is a web app that helps you report non-emergency traffic violations.
